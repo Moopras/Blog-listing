@@ -13,6 +13,6 @@ For this project, I used an external camera (phone) and connected it using an ap
 
 Run AttendanceFI.py to try the software.
 
-Also, I got help from a repository by @ashishdubey10 and multiple sources on google. :)
+Also, I got help from a repository by @ashishdubey10 and multiple sources on google. Thank you!:)
 
 
