@@ -27,7 +27,7 @@ cv.waitKey(0)
 
 
 
-
+#for detection on live footage
 # capture = cv.VideoCapture(0)
 
 
