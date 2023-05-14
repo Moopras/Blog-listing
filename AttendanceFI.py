@@ -75,8 +75,8 @@ def TakeImages():
         message.configure(text = res)
         return
     else:
-        video = r'C:\OpenCV2\TrainingImages\Video'
-        video_images = 'C:\\OpenCV2\\TrainingImages\\'+ Id +'\\' + name
+        video = r'TrainingImages\Video'
+        video_images = 'TrainingImages\\'+ Id +'\\' + name
 
         if not os.path.isdir(video_images):
             os.makedirs(video_images)
@@ -84,7 +84,7 @@ def TakeImages():
         cap = cv2.VideoCapture(1)
         if not cap.isOpened():
             exit(0)
-        harcascadePath = r"C:\OpenCV2\haar_face.xml"
+        harcascadePath = r"haar_face.xml"
         haar_cascade = cv2.CascadeClassifier(harcascadePath)
         frameFrequency=25
         total_frame = 0
@@ -119,11 +119,11 @@ def threadingTkImg():
 
 def TrainImages():
     p=[]
-    for i in os.listdir(r'C:\OpenCV2\TrainingImages'):
+    for i in os.listdir(r'TrainingImages'):
         p.append(i)
 
     print(p)
-    DIR = r'C:\OpenCV2\TrainingImages'
+    DIR = r'TrainingImages'
     haar_cascade = cv2.CascadeClassifier('haar_face.xml')
     features = []
     labels = []
@@ -156,7 +156,7 @@ def TrainImages():
             
 
 def attendance(name):
-    with open (r'C:\OpenCV2\Attendance\Attendance.csv', 'r+') as f:
+    with open (r'Attendance\Attendance.csv', 'r+') as f:
         myDataList = f.readlines()
         nameList = []
         for line in myDataList:
@@ -172,15 +172,15 @@ def attendance(name):
 def TakeAttendance():
     takeAtten()
     # p=[]
-    # for i in os.listdir(r'C:\Users\Psalm johnson\Documents\Dev\OpenCV2\TrainingImages'):
+    # for i in os.listdir(r'TrainingImages'):
     #     print(p)
-    # harcascadePath = r"C:\Users\Psalm johnson\Documents\Dev\OpenCV2\haar_face.xml"
+    # harcascadePath = r"haar_face.xml"
     # capture = cv2.VideoCapture(0)
     # while True:
     #     haar_cascade = cv2.CascadeClassifier(harcascadePath)
             
     #     face_recognizer = cv2.face.LBPHFaceRecognizer_create()
-    #     face_recognizer.read(r'C:\Users\Psalm johnson\Documents\Dev\OpenCV2\TrainingImageLabel\face_trained.yml')
+    #     face_recognizer.read(r'TrainingImageLabel\face_trained.yml')
     #     if not capture.isOpened():
     #         print("not opened..")
     #         exit(0)
