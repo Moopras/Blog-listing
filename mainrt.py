@@ -14,7 +14,7 @@ def takeAtten():
      # features = np.load('features.npy')
      # labels = np.load('labels.npy')
           face_recognizer = cv.face.LBPHFaceRecognizer_create()
-          face_recognizer.read(r'face_trained.yml')
+          face_recognizer.read(r'\\face_trained.yml')
           resized = cv.resize(frame, (800, 600), interpolation = cv.INTER_AREA)
           gray = cv.cvtColor(resized, cv.COLOR_BGR2GRAY)
           faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor = 1.1, minNeighbors = 4)
