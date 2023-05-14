@@ -9,12 +9,12 @@ def takeAtten():
      while True:
           isTrue, frame = capture.read()
           cv.imshow('Webcam', frame)
-          haar_cascade = cv.CascadeClassifier(r'C:\Users\Psalm johnson\Documents\Dev\OpenCV2\haar_face.xml')
+          haar_cascade = cv.CascadeClassifier(r'haar_face.xml')
           people = ['17--52HA096', '17-52HA074','17-52HA066']
      # features = np.load('features.npy')
      # labels = np.load('labels.npy')
           face_recognizer = cv.face.LBPHFaceRecognizer_create()
-          face_recognizer.read(r'C:\Users\Psalm johnson\Documents\Dev\OpenCV2\\face_trained.yml')
+          face_recognizer.read(r'face_trained.yml')
           resized = cv.resize(frame, (800, 600), interpolation = cv.INTER_AREA)
           gray = cv.cvtColor(resized, cv.COLOR_BGR2GRAY)
           faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor = 1.1, minNeighbors = 4)
@@ -39,7 +39,7 @@ def takeAtten():
      capture.release()
      cv.destroyAllWindows()
      def attendance(name):
-          with open (r'C:\Users\Psalm johnson\Documents\Dev\OpenCV2\Attendance\Attendance.csv', 'r+') as f:
+          with open (r'Attendance\Attendance.csv', 'r+') as f:
                myDataList = f.readlines()
                nameList = []
                for line in myDataList:
