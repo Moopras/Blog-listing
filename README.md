@@ -1,7 +1,7 @@
 # Face-Recognition-System-For-Class-Attendance-Monitoring
 This repository contains the project I submitted for my final year in school. 
 
-I used Open Source Computer Vision (OpenCV), Python and tkinter gui interface. 
+I used Open Source Computer Vision (OpenCV), Python, numpy, panda and tkinter gui interface. 
 The software has the ability to take images, train them and use the trained images to take attendance. 
 
 For a new user, the user enters the name and matric number of the student, then clicks the face detection button.
