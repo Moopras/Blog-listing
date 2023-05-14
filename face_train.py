@@ -5,11 +5,11 @@ import numpy as np
 
 def create_train():
     p=[]
-    for i in os.listdir(r'C:\OpenCV2\TrainingImages'):
+    for i in os.listdir(r'TrainingImages'):
         p.append(i)
 
     print(p)
-    DIR = r'C:\OpenCV2\TrainingImages'
+    DIR = r'TrainingImages'
     haar_cascade = cv.CascadeClassifier('haar_face.xml')
     features = []
     labels = []
